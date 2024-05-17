@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin-top: 40px;
+}
+
+a {
+  background-color: #e1acac;
+  border-radius: 50px;
+  padding: 30px 100px;
+  text-align: center;
+  color: #7469b6;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bolder;
+  transition: all 0.2s ease-in;
+}
+
+a:hover {
+  background-color: #7bc9ff;
+  color: #e1acac;
+}
+img {
+  width: 150px;
+  /* margin-top: 50px; */
+  align-items: center;
+  margin-left: 80px;
+}
