@@ -3,14 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./Css/endgame.css" />
+    <link rel="stylesheet" href="./Css/global.css" />
+    <title>End Game</title>
   </head>
   <body>
-    <h1>End of the gmae</h1>
+    <h1>The End !</h1>
     <span id="score-bord">0</span>
-    <input type="text" placeholder="Enter your email" />
-    <button class="save">Save</button>
-    <button class="play-again">Play Again</button>
-    <button class="go-home">Go Home</button>
+    <input type="email" placeholder="example@example.com" />
+    <button onclick="validateEmail()" class="save">Save</button>
+    <a href="./index/game.html">Play Again</a>
+    <a href=".">High Score</a>
+    <a href="./index/index.html">Go Home</a>
+
+    <script src="./js/end.js"></script>
   </body>
 </html>

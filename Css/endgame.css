@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+
+h1 {
+  color: #7469b6;
+  font-size: 150px;
+  font-family: "Jersey 10", sans-serif;
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
+#score-bord {
+  display: inline-block;
+  background-color: #e1acac;
+  line-height: 25px;
+  text-align: center;
+  font-size: 5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 60px;
+  color: #7469b6;
+  border-radius: 25px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+input {
+  width: 360px;
+  height: 55px;
+  border-radius: 20px;
+  border: 2px solid #7469b6;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+input:hover {
+  border: 2px solid #7469b6;
+  background-color: #d5d0f0;
+}
+
+a,
+button {
+  width: 350px;
+  padding: 20px;
+  background-color: #e1acac;
+  border-radius: 28px;
+  border: none;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 10px;
+  color: #7469b6;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+a:hover,
+button:hover {
+  background-color: #7bc9ff;
+  color: #e1acac;
+  border: #7bc9ff;
+}

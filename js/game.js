@@ -65,8 +65,7 @@ const nextHandler = () => {
     showQuestion();
     removeClasses();
   } else {
-    localStorage.setItem("score", JSON.stringify(score));
-    window.location.assign("/end.html");
+    finishHandler();
   }
   console.log(questionIndex);
 };
