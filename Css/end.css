@@ -66,8 +66,8 @@ button:hover {
   height: 50px;
   position: relative;
   top: -435px;
-  left: -160px;
-  display: none;
+  right: -160px;
+  display: block;
 }
 .happy2 {
   display: block;
@@ -85,7 +85,7 @@ button:hover {
     transform: translateY(-80px) translateX(0);
   }
   100% {
-    transform: translateY(-80px) translateX(-150px);
+    transform: translateY(-80px) translateX(+150px);
   }
 }
 .hand {
@@ -114,7 +114,8 @@ button:hover {
   overflow: hidden;
   border-right: 0.15rem solid black;
   white-space: nowrap;
-  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-left: 680px;
   letter-spacing: 0.15rem;
   animation: typing 3.5s step(40, end), blink-caret 0.75s step-end infinite;
 }

@@ -32,12 +32,14 @@ const validate = (event) => {
   }
 };
 saveButton.addEventListener("click", (event) => validate(event));
-
-const typeWriter = (text, i, typingText) => {
+let typedText = "";
+let i = 0;
+const typeWriter = () => {
   if (i < text.length) {
-    typingText.innerHTML += text.charAt(i);
+    typedText += text.charAt(i);
+    typingText.innerHTML = typedText;
     i++;
-    setTimeout(() => typeWriter(text, i, typingText), 100);
+    setTimeout(() => typeWriter(), 100);
   }
 };
-typeWriter(text, 0, typingText);
+typeWriter();
