@@ -5,8 +5,8 @@ const saveButton = document.querySelector(".save");
 const input = document.querySelector("input");
 const happyRobot = document.querySelector(".happy");
 const showHand = document.querySelector(".hand");
-const typingText = document.getElementById("typing-text");
-const text = "Your username and score saved successfully";
+// const typingText = document.getElementById("typing-text");
+// const text = "Your username and score saved successfully";
 console.dir(input);
 scoreBord.innerText = score;
 
@@ -28,18 +28,18 @@ const validate = (event) => {
     highScores.sort((a, b) => b.score - a.score);
     localStorage.setItem("highScores", JSON.stringify(highScores));
     localStorage.removeItem("score");
-    highScores.splice(5);
+    highScores.splice(3);
   }
 };
 saveButton.addEventListener("click", (event) => validate(event));
-let typedText = "";
-let i = 0;
-const typeWriter = () => {
-  if (i < text.length) {
-    typedText += text.charAt(i);
-    typingText.innerHTML = typedText;
-    i++;
-    setTimeout(() => typeWriter(), 100);
-  }
-};
-typeWriter();
+// let typedText = "";
+// let i = 0;
+// const typeWriter = () => {
+//   if (i < text.length) {
+//     typedText += text.charAt(i);
+//     typingText.innerHTML = typedText;
+//     i++;
+//     setTimeout(() => typeWriter(), 100);
+//   }
+// };
+// typeWriter();

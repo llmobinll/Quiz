@@ -67,7 +67,7 @@ button:hover {
   position: relative;
   top: -435px;
   right: -160px;
-  display: block;
+  display: none;
 }
 .happy2 {
   display: block;
@@ -110,7 +110,7 @@ button:hover {
     transform: translateY(-20px) translateX(-20px);
   }
 }
-#typing-text {
+/* #typing-text {
   overflow: hidden;
   border-right: 0.15rem solid black;
   white-space: nowrap;
@@ -137,4 +137,4 @@ button:hover {
   50% {
     border-color: black;
   }
-}
+} */
