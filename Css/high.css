@@ -22,6 +22,60 @@ li {
   color: #413872;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-li span:first-child {
+li span:first-child,
+li span:last-child {
   background-color: #fff;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+a {
+  position: fixed;
+  top: 770px;
+  background-color: #e1acac;
+  border-radius: 50px;
+  padding: 10px 50px;
+  text-align: center;
+  color: #7469b6;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bolder;
+  transition: all 0.2s ease-in;
+}
+a:hover {
+  background-color: #7bc9ff;
+  color: #e1acac;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  animation: robot 1.5s ease-in-out infinite;
+}
+@keyframes robot {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+img {
+  width: 100px;
+  display: block;
+}
+h3 {
+  display: block;
+  margin-top: 15px;
+  background-color: aquamarine;
+  height: 50px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 28px;
+  color: #413872;
 }

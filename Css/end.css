@@ -7,7 +7,7 @@ h1 {
   margin-bottom: 10px;
   margin-top: 50px;
 }
-#score-bord {
+.score-bord {
   display: inline-block;
   background-color: #e1acac;
   line-height: 25px;
@@ -20,7 +20,19 @@ h1 {
   align-items: center;
   margin-bottom: 40px;
 }
-
+.score-bord2 {
+  display: inline-block;
+  line-height: 25px;
+  text-align: center;
+  font-size: 5rem;
+  padding: 60px;
+  color: #7469b6;
+  border-radius: 25px;
+  align-items: center;
+  margin-bottom: 40px;
+  border: 2px solid #e1acac;
+  background-color: rgb(203, 72, 72);
+}
 input {
   width: 360px;
   height: 55px;
@@ -61,17 +73,42 @@ button:hover {
   display: flex;
 }
 
-.happy {
-  width: 50px;
-  height: 50px;
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h3 {
+  display: none;
+  margin-top: 15px;
+  background-color: aquamarine;
+  height: 30px;
+  padding: 3px 20px;
+  border-radius: 25px;
+  font-size: 20px;
+  color: #413872;
   position: relative;
   top: -435px;
-  right: -160px;
+  left: 300px;
+}
+.message2 {
+  display: block;
+  animation: validation 2s ease-in-out;
+  animation-iteration-count: 1;
+
+  animation-fill-mode: forwards;
+}
+.happy {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  top: -445px;
+  right: -300px;
   display: none;
 }
 .happy2 {
   display: block;
-  animation: validation 2.5s ease-in-out;
+  animation: validation 2s ease-in-out;
   animation-iteration-count: 1;
 
   animation-fill-mode: forwards;
@@ -81,11 +118,8 @@ button:hover {
   0% {
     transform: translateY(0) translateX(0);
   }
-  50% {
-    transform: translateY(-80px) translateX(0);
-  }
   100% {
-    transform: translateY(-80px) translateX(+150px);
+    transform: translateY(-80px) translateX(0);
   }
 }
 .hand {

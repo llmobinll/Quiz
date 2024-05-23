@@ -1,45 +1,40 @@
 const score = JSON.parse(localStorage.getItem("score"));
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-const scoreBord = document.getElementById("score-bord");
+const scoreBord = document.querySelector(".score-bord");
 const saveButton = document.querySelector(".save");
 const input = document.querySelector("input");
 const happyRobot = document.querySelector(".happy");
+const message = document.querySelector("h3");
 const showHand = document.querySelector(".hand");
-// const typingText = document.getElementById("typing-text");
-// const text = "Your username and score saved successfully";
-console.dir(input);
 scoreBord.innerText = score;
 
 const validate = (event) => {
   const userName = input.value;
 
-  if (!userName || !score) {
+  if (!userName) {
     showHand.classList.add("hand2");
     setTimeout(() => {
       showHand.style.display = "none";
     }, 3000);
   } else {
-    happyRobot.classList.add("happy2");
-    setTimeout(() => {
-      happyRobot.style.display = "none";
-    }, 5000);
-    const finalScore = { name: userName, score };
-    highScores.push(finalScore);
-    highScores.sort((a, b) => b.score - a.score);
-    localStorage.setItem("highScores", JSON.stringify(highScores));
-    localStorage.removeItem("score");
-    highScores.splice(3);
+    if (!score) {
+      setInterval(() => {
+        scoreBord.classList.add("score-bord2");
+      }, 1000);
+    } else {
+      happyRobot.classList.add("happy2");
+      message.classList.add("message2");
+      setTimeout(() => {
+        happyRobot.style.display = "none";
+        message.style.display = "none";
+      }, 5000);
+      const finalScore = { name: userName, score };
+      highScores.push(finalScore);
+      highScores.sort((a, b) => b.score - a.score);
+      highScores.splice(3);
+      localStorage.setItem("highScores", JSON.stringify(highScores));
+      localStorage.removeItem("score");
+    }
   }
 };
 saveButton.addEventListener("click", (event) => validate(event));
-// let typedText = "";
-// let i = 0;
-// const typeWriter = () => {
-//   if (i < text.length) {
-//     typedText += text.charAt(i);
-//     typingText.innerHTML = typedText;
-//     i++;
-//     setTimeout(() => typeWriter(), 100);
-//   }
-// };
-// typeWriter();
